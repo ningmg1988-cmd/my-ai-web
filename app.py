@@ -1,14 +1,14 @@
 import streamlit as st
 import google.generativeai as genai
 
-# Streamlit Secrets ကနေ API Key ကို ယူခြင်း
+# API Key ကို Secrets ထဲကနေ ယူခြင်း
 try:
     api_key = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=api_key)
-    # model name ကို ပိုသေချာအောင် ပြောင်းထားပါတယ်
-    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    # ရှေ့မှာ models/ ထည့်ရပါမယ်
+    model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
 except Exception as e:
-    st.error("API Key သတ်မှတ်ရာတွင် အမှားရှိနေပါသည်။ Secrets ထဲမှာ သေချာထည့်ထားလား စစ်ပေးပါ။")
+    st.error("API Key သတ်မှတ်ရာတွင် အမှားရှိနေပါသည်။")
 
 st.set_page_config(page_title="AI Assistant", layout="centered")
 st.title("🤖 ကျွန်ုပ်၏ AI လက်ထောက်")
@@ -27,6 +27,4 @@ if st.button("အဖြေတောင်းမယ်"):
                 st.error(f"Error တက်နေပါတယ်: {e}")
     else:
         st.warning("စာသားတစ်ခုခု အရင်ရိုက်ထည့်ပါ")
-
-
 
