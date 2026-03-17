@@ -22,7 +22,7 @@ if st.button("အဖြေတောင်းမယ်"):
             st.write(response.text)
     else:
         st.warning("စာသားတစ်ခုခု အရင်ရိုက်ထည့်ပါ")
-Sent
+
 
 
 
