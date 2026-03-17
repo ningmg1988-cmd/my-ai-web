@@ -23,6 +23,6 @@ if st.button("အဖြေတောင်းမယ်"):
     else:
         st.warning("စာသားတစ်ခုခု အရင်ရိုက်ထည့်ပါ")
 Sent
-Write to Baba Bu
+
 
 
