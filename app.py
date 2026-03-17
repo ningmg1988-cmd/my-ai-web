@@ -6,7 +6,7 @@ try:
     api_key = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=api_key)
     # ရှေ့မှာ models/ ထည့်ရပါမယ်
-    model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
+    model = genai.GenerativeModel('models/gemini-3.1-flash-latest')
 except Exception as e:
     st.error("API Key သတ်မှတ်ရာတွင် အမှားရှိနေပါသည်။")
 
